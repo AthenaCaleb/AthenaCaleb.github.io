@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athena Caleb - Portfolio</title>
+
+    <!-- Custom CSS (Bootstrap removed) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: #2c2c2c;
+            color: #f5f5f5;
+            width: 300px; /* Set width for the sidebar */
+            height: 100vh;
+            padding: 30px;
+            position: fixed; /* Keep it fixed in the corner */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure it's always on top */
+            overflow-y: auto; /* Make it scrollable if the content exceeds height */
+        }
+
+        .sidebar img {
+            border-radius: 50%;
+            width: 175px;
+            height: 175px;
+            object-fit: cover;
+            
+            border: 2px solid #fff;
+        }
+
+        .sidebar h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .sidebar nav a {
+            color: #ddd;
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+            font-size: 1.2rem;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+
+        .sidebar nav a:hover {
+            color: #fff;
+            background-color: #444;
+            padding-left: 10px;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            background: url('cybersecurity-bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            margin-left: 300px; /* Offset the main content to account for the sidebar width */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero .overlay {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .hero a:hover {
+            background-color: #0056b3;
+        }
+
+        /* General Layout */
+        main {
+            margin-left: 100px; /* Ensure all main content is pushed to the right */
+            padding: 20px;
+        }
+
+        /* Ensure content scrolls properly on smaller devices */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .hero, main {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Sidebar with Profile Image and Navigation Links -->
+        <aside class="sidebar text-center">
+            <img src="profilepic.jpg" alt="Profile Picture">
+            <h1>Athena Caleb</h1>
+            <p>Cyber Security & IoT Student</p>
+            <p><strong>Email:</strong> athena.caleb17@gmail.com</p>
+            <p><strong>LinkedIn:</strong> <a href="#" class="text-white">linkedin.com/in/athenacaleb</a></p>
+
+            <!-- Navigation Links -->
+            <nav class="nav flex-column mt-4">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Me</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="certifications.html" class="nav-link">Certifications</a>
+                <a href="hobbies.html" class="nav-link">Hobbies</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <header class="hero">
+                <div class="overlay">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Explore my journey in Cyber Security & IoT</p>
+                    <a href="about.html">Learn More</a>
+                </div>
+            </header>
+        </main>
+    </div>
+</body>
+</html>
